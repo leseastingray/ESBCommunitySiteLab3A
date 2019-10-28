@@ -52,6 +52,15 @@
                 @trumpet.DateJoined
             </p>
         }
+        <h4>Trombones</h4>
+        @foreach (Member trombone in Model.FilterByInstrument("trombone"))
+        {
+            <p>
+                @trombone.Name
+                <br />
+                @trombone.DateJoined
+            </p>
+        }
     </div>
 </body>
 </html>
