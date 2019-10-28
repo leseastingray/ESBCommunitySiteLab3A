@@ -1,4 +1,4 @@
-﻿@model ESBCommunitySite.Models.Roster
+﻿@model IEnumerable<ESBCommunitySite.Models.Member>
 
 @{
     Layout = null;
@@ -26,9 +26,32 @@
     <div>
         WORKING ON THIS PART - GET IT ON THE PAGE
         <h4>Flutes</h4>
-        <p>
-            @Model.FilterByInstrument("flute");
-        </p>
+        @foreach (Member flute in Model.FilterByInstrument("flute"))
+        {
+            <p>
+                @flute.Name
+                <br />
+                @flute.DateJoined
+            </p>
+        }
+        <h4>Clarinets</h4>
+        @foreach (Member clarinet in Model.FilterByInstrument("clarinet"))
+        {
+            <p>
+                @clarinet.Name
+                <br />
+                @clarinet.DateJoined
+            </p>
+        }
+        <h4>Trumpets</h4>
+        @foreach (Member trumpet in Model.FilterByInstrument("trumpet"))
+        {
+            <p>
+                @trumpet.Name
+                <br />
+                @trumpet.DateJoined
+            </p>
+        }
     </div>
 </body>
 </html>

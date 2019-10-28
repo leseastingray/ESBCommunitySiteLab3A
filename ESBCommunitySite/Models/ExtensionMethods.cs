@@ -10,9 +10,10 @@ namespace ESBCommunitySite.Models
     {
         public static IEnumerable<Member> FilterByInstrument(this IEnumerable<Member> memberEnum, string instrument)
         {
-            foreach (Member memb in memberEnum)
+            List<Member> members = new List<Member>();
+            foreach (Member memb in members)
             {
-                if(memb?.Instrument == instrument)
+                if(memb.Instrument == instrument)
                 {
                     yield return memb;
                 }

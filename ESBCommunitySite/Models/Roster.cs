@@ -40,7 +40,7 @@ namespace ESBCommunitySite.Models
             Member lBerry = new Member
             {
                 Name = "Loren Berry",
-                Instrument = "bass trombone" + "euphonium",
+                Instrument = "trombone" + "euphonium",
                 DateJoined = "November 1999",
                 Board = false,
                 SectionLeader = false
