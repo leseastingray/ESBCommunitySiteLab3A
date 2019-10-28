@@ -34,5 +34,13 @@ namespace ESBCommunitySite.Controllers
             List<Member> tubas = new List<Member>(currentRoster.FilterByInstrument("tuba"));
             return View();
         }
+        public ViewResult RosterByJoinDate()
+        {
+            List<Member> roster = Models.Roster.CurrentRoster;
+            roster.Sort((r1, r2) => string.Compare(r1.DateJoined, r2.DateJoined, StringComparison.Ordinal));
+            roster.Reverse();
+            return View(roster);
+
+        }
     }
 }

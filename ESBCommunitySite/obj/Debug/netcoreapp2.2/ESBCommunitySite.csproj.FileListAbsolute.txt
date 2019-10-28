@@ -183,3 +183,4 @@ C:\Users\Student\Documents\RiverRay\ESBCommunitySiteLab3A\ESBCommunitySite\obj\D
 C:\Users\Student\Documents\RiverRay\ESBCommunitySiteLab3A\ESBCommunitySite\obj\Debug\netcoreapp2.2\ESBCommunitySite.pdb
 C:\Users\Student\Documents\RiverRay\ESBCommunitySiteLab3A\ESBCommunitySite\obj\Debug\netcoreapp2.2\ESBCommunitySite.csproj.CopyComplete
 C:\Users\Student\Documents\RiverRay\ESBCommunitySiteLab3A\ESBCommunitySite\obj\Debug\netcoreapp2.2\ESBCommunitySite.csprojAssemblyReference.cache
+C:\Users\Student\Documents\RiverRay\ESBCommunitySiteLab3A\ESBCommunitySite\obj\Debug\netcoreapp2.2\Razor\Views\Info\RosterByJoinDate.g.cshtml.cs

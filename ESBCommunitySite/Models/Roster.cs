@@ -10,7 +10,7 @@ namespace ESBCommunitySite.Models
     {
         // list for collection of members
         public static List<Member> members = new List<Member>();
-
+        public static List<Member> CurrentRoster { get { return members; } }
         // enable enumeration (need to add filtering extension)
         public static IEnumerable<Member> Members
         {

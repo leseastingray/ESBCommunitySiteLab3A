@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ESBCommunitySite.Models.Member>
+@{
+    ViewData["Title"] = "RosterByJoinDate";
+}
+
+<h1>RosterByJoinDate</h1>
+<p>
+    @foreach (Member member in Model)
+    {
+        @member.Name
+        <br />
+        @member.DateJoined
+    }
+</p>
+
