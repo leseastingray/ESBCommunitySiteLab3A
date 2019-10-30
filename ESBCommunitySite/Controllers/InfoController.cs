@@ -22,7 +22,7 @@ namespace ESBCommunitySite.Controllers
         // Roster method
         public ViewResult Roster()
         {
-            List<Member> currentRoster = new List<Member>();
+            List<Member> currentRoster = Models.Roster.GetMembers();
             List<Member> flutes = new List <Member>(currentRoster.FilterByInstrument("flute"));
             List<Member> oboes = new List<Member>(currentRoster.FilterByInstrument("oboe"));
             List<Member> clarinets = new List<Member>(currentRoster.FilterByInstrument("clarinet"));
@@ -36,9 +36,9 @@ namespace ESBCommunitySite.Controllers
         }
         public ViewResult RosterByJoinDate()
         {
-            List<Member> roster = Models.Roster.CurrentRoster;
-            roster.Sort((r1, r2) => string.Compare(r1.DateJoined, r2.DateJoined, StringComparison.Ordinal));
-            roster.Reverse();
+            List<Member> roster = Models.Roster.GetMembers();
+            roster.Sort((r1, r2) => string.Compare(r1.DateJoined.Substring((r1.DateJoined.Length-4)), 
+                r2.DateJoined.Substring(r2.DateJoined.Length-4), StringComparison.Ordinal));
             return View(roster);
 
         }

@@ -1,15 +1,50 @@
-﻿@model IEnumerable<ESBCommunitySite.Models.Member>
+﻿@model IEnumerable<ESBCommunitySite.Models.Member>;
+
 @{
     ViewData["Title"] = "RosterByJoinDate";
+    Layout = null;
 }
 
-<h1>RosterByJoinDate</h1>
-<p>
-    @foreach (Member member in Model)
-    {
-        @member.Name
-        <br />
-        @member.DateJoined
-    }
-</p>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Roster</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <nav>
+        <a href="Home/History">History</a>
+        <a href="Home/Contact">Contact</a>
+        <a href="">Information</a>
+        <a href="Location">Location</a>
+        <a href="Roster">Roster</a>
+    </nav>
+    <div class="text-center">
+        <h2>Eugene Symphonic Band Roster</h2>
+        <a asp-action="Roster">Members By Section</a>
+        <a asp-action="RosterByJoinDate">Members By Join Date</a>
+    </div>
+    <div>
+        <p>
+            <table class="table table-lg table-striped table-bordered">
+                <thead>
+                    <tr>Name</tr>
+                    <tr>Join Date</tr>
+                    <tr>Instrument</tr>
+                </thead>
+                <tbody>
+                        @foreach (Member member in Model)
+                        {
+                        <tr>
+                        <td>@member.Name</td>
+                        <td>@member.DateJoined</td>
+                        <td>@member.Instrument</td>
+                        </tr>
+                        }
+                </tbody>
+            </table>
+        </p>
+    </div>
+</body>
+</html>
