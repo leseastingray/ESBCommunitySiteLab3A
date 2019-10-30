@@ -12,13 +12,7 @@ namespace ESBCommunitySite.Models
         public static List<Member> members = new List<Member>();
         public static List<Member> CurrentRoster { get { return members; } }
         // enable enumeration (need to add filtering extension)
-        public static IEnumerable<Member> Members
-        {
-            get
-            {
-                return members;
-            }
-        }
+        public static IEnumerable<Member> Members { get { return members; } }
 
         // method to add members to roster
         public static void AddMember(Member member)
@@ -26,21 +20,21 @@ namespace ESBCommunitySite.Models
             members.Add(member);
         }
 
-        // get array of members (moved from Member.cs; this might not remain)
+        // get list of members
         public static List<Member> GetMembers()
         {
             Member sCossey = new Member
             {
                 Name = "Sherry Cossey",
                 Instrument = "clarinet",
-                DateJoined = "Septemeber 1978",
+                DateJoined = "September 1978",
                 Board = true,
                 SectionLeader = true
             };
             Member lBerry = new Member
             {
                 Name = "Loren Berry",
-                Instrument = "trombone" + "euphonium",
+                Instrument = "trombone" + " euphonium",
                 DateJoined = "November 1999",
                 Board = false,
                 SectionLeader = false
@@ -48,7 +42,7 @@ namespace ESBCommunitySite.Models
             Member dHolmes = new Member
             {
                 Name = "David Holmes",
-                Instrument = "trumpet" + "cornet",
+                Instrument = "trumpet" + " cornet",
                 DateJoined = "June 2003",
                 Board = true,
                 SectionLeader = false
@@ -56,7 +50,7 @@ namespace ESBCommunitySite.Models
             Member aLese = new Member
             {
                 Name = "Amy Lese",
-                Instrument = "bass trombone",
+                Instrument = "trombone",
                 DateJoined = "September 2015",
                 Board = true,
                 SectionLeader = false
@@ -64,7 +58,7 @@ namespace ESBCommunitySite.Models
             Member sMaricle = new Member
             {
                 Name = "Steve Maricle",
-                Instrument = "trumpet" + "cornet",
+                Instrument = "trumpet" + " cornet",
                 DateJoined = "June 2007",
                 Board = false,
                 SectionLeader = true
@@ -75,7 +69,7 @@ namespace ESBCommunitySite.Models
         // method to get list of members who play a particular instrument
         public List<Member> GetMemberFromInstrument(string instrument)
         {
-            // instatiate list for members who play the instrument
+            // instantiate list for members who play the instrument
             List<Member> instrumentMembers = new List<Member>();
 
             foreach (Member m in members)

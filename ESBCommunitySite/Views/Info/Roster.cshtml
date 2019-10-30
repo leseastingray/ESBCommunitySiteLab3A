@@ -15,9 +15,9 @@
     <nav>
         <a href="Home/History">History</a>
         <a href="Home/Contact">Contact</a>
-        <a href="">Information</a>
+        <a href="/Info/">Information</a>
         <a href="Location">Location</a>
-        <a href="Roster">Roster</a>
+        <a href="">Roster</a>
     </nav>
     <div class="text-center">
         <h2>Eugene Symphonic Band Roster</h2>
@@ -25,7 +25,7 @@
         <a asp-action="RosterByJoinDate">Members By Join Date</a>
     </div>
     <div>
-        WORKING ON THIS PART - GET IT ON THE PAGE
+        ROSTER BY INSTRUMENT UNDERCONSTRUCTION. SEE ROSTER BY JOIN DATE
         <h4>Flutes</h4>
         @foreach (Member flute in Model.FilterByInstrument("flute"))
         {

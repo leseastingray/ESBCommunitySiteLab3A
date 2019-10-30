@@ -8,7 +8,6 @@ namespace ESBCommunitySite.Models
     public class Member
     {
         public string Name { get; set; }
-        // should this just be a method?
         public string Instrument { get; set; }
         public string DateJoined { get; set; }
         public bool Board { get; set; }
@@ -20,7 +19,5 @@ namespace ESBCommunitySite.Models
         {
             Member.AddInstrument(instrument);
         }
-
-        // moved hardcoded list to roster; not sure if this will remain
     }
 }
